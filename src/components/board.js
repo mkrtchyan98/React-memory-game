@@ -3,6 +3,7 @@ import Card from './Card'
 import './board.css'
 import Header from './Header'
 
+
 const Board = props => {
   const [cards, setCards] = useState(props.cards)
   const [checkers, setCheckers] = useState([])
@@ -74,7 +75,7 @@ const Board = props => {
     <div className="Board">
       <h1>Your moves amount:{moves}</h1>
       <button onClick={() => reset(moves)} className="moves-btn">restart</button>
-      <ul className="cards-list">
+        <ul className="cards-list">
       {cards.map(card => (
        <li> <Card {...card} onClick={onCardClick(card)} key={card.id} /></li>
       ))}
