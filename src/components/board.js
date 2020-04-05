@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Card from './Card'
 import './board.css'
 import Header from './Header'
-
+import {shuffle} from '../buildcards'
 
 const Board = props => {
   const [cards, setCards] = useState(props.cards)
@@ -42,17 +42,20 @@ const Board = props => {
       }, time)
     }
   }
-  function reset(moves) {
-    setMoves(0)
-    setCompleted([])
-  }
+ async  function reset(moves) {
+          setMoves(0)
+    setCompleted([]) 
+    setCheckers([])
+    shuffle(cards)
+      }
+   
 
 
 
 
 
  let wonGameText =  completed.length === cards.length/2 ? (
-                    <Header moves={moves}/>
+                    <Header/>
                 ) : null ;
 
 
@@ -63,6 +66,7 @@ const Board = props => {
         checkers.find(c => c.id === card.id) ||
         completed.includes(card.type),
     }))
+
     setCards(newCards)
   }, [checkers, completed])
 

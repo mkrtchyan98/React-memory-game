@@ -11,7 +11,7 @@
       })
       return [...result, getCard(), getCard()]
     }, [])
-    return suffle(cards)
+    return shuffle(cards)
   }
 
   else if (amount === 6) {
@@ -23,7 +23,7 @@
       })
       return [...result, getCard(), getCard()]
     }, [])
-    return suffle(cards)
+    return shuffle(cards)
   }
   else if (amount === 4) {
      const cards = images.slice(4).reduce((result, type) => {
@@ -34,12 +34,12 @@
       })
       return [...result, getCard(), getCard()]
     }, [])
-    return suffle(cards)
+    return shuffle(cards)
 
   }
 }
 
-function suffle(cards) {
+export function shuffle(cards) {
   let len = cards.length
   for (let i = 0; i < len; i++) {
     let randomId = Math.floor(Math.random() * len)
