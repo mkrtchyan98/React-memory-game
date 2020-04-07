@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
-import LevelFirst from './components/Levels/LevelFirst';
-import LevelSecond from './components/Levels/LevelSecond';
-import LevelThird from './components/Levels/LevelThird';
+import React, {useState,Suspense} from 'react'
 import './App.css';
 import LevelSet from './components/Levels/LevelSet';
-
+const LevelFirst = React.lazy(() => import('./components/Levels/LevelFirst'));
+const LevelSecond = React.lazy(() => import('./components/Levels/LevelSecond'));
+const LevelThird = React.lazy(() => import('./components/Levels/LevelThird'));
 
 function App() {
 const [level,setLevel] = useState("easy");
@@ -13,7 +12,9 @@ const [level,setLevel] = useState("easy");
     <div className="App-header">
     <h1>START GAME</h1>
     <LevelSet changeLevel={setLevel} />
+          <Suspense fallback={<div>Загрузка...</div>}>
  <LevelFirst />
+ </Suspense>
        </div>
  )
 }
@@ -23,7 +24,9 @@ const [level,setLevel] = useState("easy");
   <div className="App-header">
     <h1>START GAME</h1>
     <LevelSet changeLevel={setLevel} />
+          <Suspense fallback={<div>Загрузка...</div>}>
   <LevelSecond />
+  </Suspense>
          </div>
 
   )
@@ -33,7 +36,9 @@ const [level,setLevel] = useState("easy");
    <div className="App-header">
     <h1>START GAME</h1>
     <LevelSet changeLevel={setLevel} />
+          <Suspense fallback={<div>Загрузка...</div>}>
   <LevelThird />
+  </Suspense>
          </div>
 
   )

@@ -4,6 +4,7 @@ import './board.css'
 import Header from './Header'
 import {shuffle} from '../buildcards'
 
+
 const Board = props => {
   const [cards, setCards] = useState(props.cards)
   const [checkers, setCheckers] = useState([])
@@ -23,7 +24,7 @@ const Board = props => {
     if (checkersFull(newCheckers)) { //if two cards not same  reset 
       resetCheckersAfter(1000)
       setMoves(moves+1)
-          console.log(moves)
+          
     }
 
     function validateCheckers(checkers){
@@ -81,7 +82,7 @@ const Board = props => {
       <button onClick={() => reset(moves)} className="moves-btn">restart</button>
         <ul className="cards-list">
       {cards.map(card => (
-       <li> <Card {...card} onClick={onCardClick(card)} key={card.id} /></li>
+       <li key={card.id}> <Card {...card} onClick={onCardClick(card)} key={card.id} /></li>
       ))}
      
       </ul>
