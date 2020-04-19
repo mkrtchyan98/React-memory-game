@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-memory-game"]=this["webpackJsonpreact-memory-game"]||[]).push([[5],{46:function(e,a,t){"use strict";t.r(a);var r=t(0),c=t.n(r),s=t(15),m=t(14),n=t(49),o=Object(n.a)({root:{"& div.Board":{width:"100%",height:"100%"}}});a.default=function(){var e=Object(m.a)(4),a=o();return c.a.createElement("div",{className:a.root},c.a.createElement("div",{className:"App-header"},c.a.createElement(s.a,{cards:e})))}}}]);
+//# sourceMappingURL=5.7068c351.chunk.js.map
