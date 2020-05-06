@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot renders 1`] = `
+<div
+  className="App-header"
+>
+  <h1>
+    START GAME
+  </h1>
+  <div>
+    <button
+      className="level-btn"
+      onClick={[Function]}
+    >
+      Easy
+    </button>
+    <button
+      className="level-btn"
+      onClick={[Function]}
+    >
+      Medium
+    </button>
+    <button
+      className="level-btn"
+      onClick={[Function]}
+    >
+      Hard
+    </button>
+  </div>
+  <div>
+    Загрузка...
+  </div>
+</div>
+`;
+
+exports[`Header snapshot renders 1`] = `
+<div
+  className="grid-header-container"
+>
+  <div
+    className="justify-left timer"
+  />
+  <div
+    className="justify-center game-status-text"
+  />
+  <div
+    className="justify-end"
+  >
+    <h1>
+      You won
+    </h1>
+    <h2>
+       the expected number of moves needed for a game with n cards converges to ~ 0.8 * n 
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`LevelFirst snapshot renders 1`] = `ShallowWrapper {}`;
+
+exports[`board  renders 1`] = `ShallowWrapper {}`;

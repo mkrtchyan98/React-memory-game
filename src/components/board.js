@@ -53,13 +53,6 @@ const Board = props => {
 
 
 
-
-
- let wonGameText =  completed.length === cards.length/2 ? (
-                    <Header/>
-                ) : null ;
-
-
   useEffect(() => {
     const newCards = cards.map(card => ({
       ...card,
@@ -74,7 +67,9 @@ const Board = props => {
   return ( 
     <div>
     <div> 
-    {wonGameText}
+    {completed.length === cards.length/2 ? (
+                    <Header/>
+                ) : null }
     </div>
 
     <div className="Board">
